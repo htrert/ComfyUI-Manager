@@ -5,11 +5,11 @@ All notable changes to **ComfyUI-Manager** are documented in this file.
 The format is based on [Keep a Changelog 1.1.0](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [4.2.1] - 2026-04-22
 
-Security-hardening release on branch `fix/csrf-post-conversion`. Contains
-breaking-ish API changes for state-mutating endpoints. See **Migration notes**
-below before upgrading programmatic clients.
+Security-hardening release. Contains breaking-ish API changes for
+state-mutating endpoints. See **Migration notes** below before upgrading
+programmatic clients.
 
 ### Security
 
@@ -65,6 +65,12 @@ below before upgrading programmatic clients.
 
 ### Added
 
+- **Server-push feature flag `extension.manager.supports_csrf_post`** registered
+  at startup, allowing ComfyUI-frontend (and other clients) to detect
+  CSRF-POST backend support as a semantic capability contract, without
+  relying on version string parsing. Manager versions prior to 4.2.1 do not
+  set the flag — clients should treat its absence as 'incompatible with
+  POST-only state-mutation endpoints'.
 - **E2E test harness variants** for security-level and legacy-mode scenarios:
   `tests/e2e/scripts/start_comfyui_legacy.sh`,
   `tests/e2e/scripts/start_comfyui_permissive.sh`,
@@ -120,4 +126,4 @@ below before upgrading programmatic clients.
   perform the change from a trusted entry point. Read access via `GET` is
   unaffected.
 
-[Unreleased]: https://github.com/Comfy-Org/ComfyUI-Manager/compare/v4.1b6...HEAD
+[4.2.1]: https://github.com/Comfy-Org/ComfyUI-Manager/compare/v4.1b6...v4.2.1
