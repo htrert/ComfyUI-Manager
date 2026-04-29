@@ -46436,7 +46436,18 @@
                 "https://civitai.com/api/download/models/158997"
             ],
             "install_type": "unzip",
-            "description": "This is a node to convert an image into a CMYK Halftone dot image."
-        }
-    ]
+"description": "This is a node to convert an image into a CMYK Halftone dot image."
+  },
+  {
+    "author": "htrert",
+    "title": "Tikpan Official Nodes",
+    "reference": "https://github.com/htrert/ComfyUI-Tikpan-Pro",
+    "files": [
+        "https://github.com/htrert/ComfyUI-Tikpan-Pro"
+    ],
+    "install_type": "git-clone",
+    "description": "Tikpan 官方独家节点。包含高阶图生图、文本生图、Grok、Veo视频生成等，支持国内全渠道极简稳定访问。",
+    "nodename_pattern": "Tikpan.*"
+  }
+]
 }
